@@ -1,0 +1,8 @@
+
+elasticsearch:
+  clusterName: qing
+  hostList: # 定义三个节点的Elastic集群配置
+    - {hostName: '127.0.0.1', transPort: 9300, httpPort: 9200}
+    - {hostName: '127.0.0.1', transPort: 9301, httpPort: 9201}
+  clientNum: 8
+  sqlUrl: _sql

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.greatwall.business.db.dict.dao.DictMapper" >
+  
+	
+	<select id="queryByTrem" parameterType="com.greatwall.business.db.dict.model.DictModel" resultType="com.greatwall.business.db.dict.model.DictModel" >
+		SELECT
+		   dict_id
+	      ,table_name
+	      ,field_name
+	      ,`key`
+	      ,`value`
+	      ,short_value
+		FROM
+		  dict
+        <where>
+            <if test="fieldName != null and fieldName != '' ">
+                AND field_name LIKE #{fieldName}
+            </if>
+            <if test="key  != null and key != '' ">
+                AND `key` LIKE #{key}
+            </if>
+            <if test="value  != null and value != '' ">
+                AND `value` LIKE #{value}
+            </if>
+            <if test="tableName  != null and tableName != '' ">
+                AND table_name = #{tableName}
+            </if>
+        </where>
+	</select>
+	
+	
+	<select id="deleteDict" parameterType="com.greatwall.business.db.dict.model.DictModel">
+		DELETE
+		FROM
+		  dict
+        <where>
+            <if test="dictId  != null and dictId != '' ">
+                AND dict_id = #{dictId}
+            </if>
+            <if test="fieldName != null and fieldName != '' ">
+                AND field_name = #{fieldName}
+            </if>
+        </where>
+	</select>
+
+  
+</mapper>

@@ -1,0 +1,10 @@
+spring:
+  application: 
+    name: school
+  profiles:
+    active: dev
+    
+version:
+  base: 1.0       
+  svnid: $[prefix.revision]
+  time: $[package.time]

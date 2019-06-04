@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<% include("/common/css.html"){} %>
+</head>
+<body>
+<% include("/common/header.html"){} %>
+<div class="mblock">
+<div class="panel">
+    <div class="title">404错误</div>
+	<div class="content">
+	<p>timestamp=${timestamp!}</p>
+	<p>status=${status!}</p>
+	<p>error=${error!}</p>
+	<p>message=${message!}</p>
+	<p>path=${path!}</p>
+	</div>
+</div>
+</div>
+<% include("/common/footer.html"){} %>
+</body>
+</html>

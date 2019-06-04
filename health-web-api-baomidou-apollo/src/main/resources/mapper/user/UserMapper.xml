@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.greatwall.business.db.user.dao.UserMapper" >
+  
+	<select id="login" parameterType="com.greatwall.business.db.user.form.UserLoginForm" resultType="com.greatwall.business.db.user.vo.UserSessionVo">
+		SELECT
+		   user_id
+	      ,wx_open_id
+	      ,mobile
+	      ,nick_name
+	      ,real_name
+	      ,avatar
+	      ,sex
+	      ,status
+	      ,create_time
+		FROM
+		  user
+		WHERE mobile = #{userName} AND password = #{password}
+	</select>
+	
+	
+	<select id="deleteUserByMobile" parameterType="com.greatwall.business.db.user.model.UserModel" >
+		DELETE
+		FROM
+		user
+		WHERE mobile = #{mobile}
+	</select>
+	
+	<select id="queryByTrem" parameterType="com.greatwall.business.db.user.model.UserModel" resultType="com.greatwall.business.db.user.model.UserModel" >
+		SELECT
+		   user_id
+	      ,wx_open_id
+	      ,mobile
+	      ,nick_name
+	      ,real_name
+	      ,avatar
+	      ,sex
+	      ,status
+	      ,create_time
+		FROM
+		  user
+        <where>
+            <if test="nickName != null and nickName != '' ">
+                AND nick_name LIKE #{nickName}
+            </if>
+            <if test="sex == 0 or sex == 1 ">
+                AND sex = #{sex}
+            </if>
+            <if test="status == 0 or  status == 1">
+                AND status = #{status}
+            </if>
+        </where>
+	</select>
+	  
+</mapper>

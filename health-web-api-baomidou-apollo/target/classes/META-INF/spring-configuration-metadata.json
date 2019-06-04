@@ -1,0 +1,58 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "xingkong.framework.config.DataSourceConfiguration",
+      "sourceMethod": "public javax.sql.DataSource dataSource() "
+    },
+    {
+      "name": "version",
+      "type": "xingkong.framework.config.VersionConfig",
+      "sourceType": "xingkong.framework.config.VersionConfig"
+    },
+    {
+      "name": "weixin",
+      "type": "xingkong.framework.config.WexinConfig",
+      "sourceType": "xingkong.framework.config.WexinConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "version.base",
+      "type": "java.lang.String",
+      "sourceType": "xingkong.framework.config.VersionConfig"
+    },
+    {
+      "name": "version.svnid",
+      "type": "java.lang.String",
+      "sourceType": "xingkong.framework.config.VersionConfig"
+    },
+    {
+      "name": "version.time",
+      "type": "java.lang.String",
+      "sourceType": "xingkong.framework.config.VersionConfig"
+    },
+    {
+      "name": "weixin.app-secret",
+      "type": "java.lang.String",
+      "sourceType": "xingkong.framework.config.WexinConfig"
+    },
+    {
+      "name": "weixin.appid",
+      "type": "java.lang.String",
+      "sourceType": "xingkong.framework.config.WexinConfig"
+    },
+    {
+      "name": "weixin.redirect-url",
+      "type": "java.lang.String",
+      "sourceType": "xingkong.framework.config.WexinConfig"
+    },
+    {
+      "name": "weixin.token",
+      "type": "java.lang.String",
+      "sourceType": "xingkong.framework.config.WexinConfig"
+    }
+  ],
+  "hints": []
+}

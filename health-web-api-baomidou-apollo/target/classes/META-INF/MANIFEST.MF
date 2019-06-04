@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: health-web-api-baomidou-apollo
+Implementation-Version: 1.00
+Built-By: 84644
+Implementation-Vendor-Id: greatwall
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/greatwall/health-web-api-baomidou-apollo
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,27 @@
+spring:
+  application: 
+    name: health-web-api
+  profiles:
+    active: dev
+
+
+  boot:
+    admin:
+      client:
+        url: "http://localhost:9000"  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+version:
+  base: 1.0       
+  svnid: $[prefix.revision]
+  time: $[package.time]
+  
+logging:
+  file: E:/var/log/health-web-api.log

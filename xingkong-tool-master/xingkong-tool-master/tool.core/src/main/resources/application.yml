@@ -1,0 +1,10 @@
+spring:
+  application: 
+    name: tool.core
+  profiles:
+    active: dev
+    
+version:
+  base: 1.0       
+  svnid: $[prefix.revision]
+  time: $[package.time]

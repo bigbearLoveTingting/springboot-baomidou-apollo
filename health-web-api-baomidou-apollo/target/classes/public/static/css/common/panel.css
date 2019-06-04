@@ -1,0 +1,24 @@
+.panel{
+	margin:20px;
+	display: block;
+	border: 1px solid #DEDEDE;
+}
+
+.panel .title{
+	font-size:16px;
+	height: 40px;
+	line-height:40px;
+	padding-left: 20px;
+	background:#F3F3F8;
+}
+
+.panel .content{
+	padding: 20px;
+	
+}
+.content p{
+	line-height:25px;
+}
+.content li{
+    line-height:25px;
+}
